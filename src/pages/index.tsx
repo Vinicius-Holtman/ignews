@@ -7,7 +7,7 @@ import { stripe } from '../services/stripe'
 import styles from './home.module.scss'
 
 interface HomeProps {
-  product : {
+  product: {
     priceId: string;
     amount: string;
   }
