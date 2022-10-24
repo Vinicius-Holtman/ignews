@@ -4,7 +4,10 @@ import { SessionProvider as NextAuthProvider } from 'next-auth/react'
 
 import '../styles/global.scss';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+    Component, 
+    pageProps: { session, ...pageProps },
+  }) {
   return (
     <NextAuthProvider session={pageProps.session}>
       <Header />
